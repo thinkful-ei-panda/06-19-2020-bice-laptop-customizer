@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import FeatureOptionsList from './FeatureOptionsList/FeatureOptionsList';
 
+import Header from './Header/Header';
+
 import Summary from './Summary/Summary';
 
 import './App.css';
@@ -52,15 +54,11 @@ class App extends Component {
 
 			<div className="App">
 				
-				<header>
-				
-					<h1>ELF Computing | Laptops</h1>
-				
-				</header>
+				< Header />
 				
 				<main>
 
-					{ < FeatureOptionsList featureList = { this.props.features } selectedFeatures = { this.state.selected } updateFeature = { this.updateFeature } /> }
+					{ < FeatureOptionsList selectedFeatures = { this.state.selected } updateFeature = { this.updateFeature } /> }
 
 					{ < Summary selectedFeatures = { this.state.selected } /> }
 				
@@ -75,3 +73,4 @@ class App extends Component {
 }
 
 export default App; 
+

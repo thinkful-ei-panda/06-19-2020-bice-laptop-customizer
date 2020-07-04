@@ -1,34 +1,10 @@
 import React from 'react';
 
-import FeatureOption from '../FeatureOption/FeatureOption';
+import Features from '../Features/Features';
 
 export default class FeatureOptionsList extends React.Component {
-
+    
     render () {
-
-        const tmpState = { ...this.props.selectedFeatures };
-
-        const features = Object.keys ( this.props.featureList ).map ( ( feature, idx ) => {
-            
-            const featureHash = feature + '-' + idx;
-
-            return (
-                
-                <fieldset className = 'feature' key = { featureHash }>
-                
-                    <legend className = 'feature__name'>
-                
-                        <h4>{ feature }</h4>
-                
-                    </legend>
-                
-                    <FeatureOption key = 'featureOptions' tmpState = { tmpState } featureList = { this.props.featureList } feature = { feature } updateFeature = { this.props.updateFeature } />
-                
-                </fieldset>
-
-            );
-        
-        });
         
         return (
         
@@ -44,7 +20,7 @@ export default class FeatureOptionsList extends React.Component {
                     
                     </legend>
 
-                    { features }
+                    <Features selectedFeatures = { this.props.selectedFeatures } updateFeature = { this.props.updateFeature } />
 
                 </form>
 

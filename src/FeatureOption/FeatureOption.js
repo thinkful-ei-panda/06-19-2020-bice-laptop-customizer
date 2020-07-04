@@ -8,6 +8,7 @@ export default class FeatureOptionsList extends React.Component {
 
     render () {
         
+        //console.log (this.props.featureList[ this.props.feature ] );
         const options = this.props.featureList[ this.props.feature ].map ( ( option, i ) => {
                        
             const optionHash = slugify ( JSON.stringify ( option ) );
@@ -39,7 +40,11 @@ export default class FeatureOptionsList extends React.Component {
         
         return (
 
-            options
+            <>
+
+                { options }
+
+            </>
             
         );
 
