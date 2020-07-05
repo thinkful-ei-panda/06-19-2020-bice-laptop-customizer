@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import FEATURES from './Features';
+
 import FeatureOptionsList from './FeatureOptionsList/FeatureOptionsList';
 
 import Header from './Header/Header';
@@ -58,7 +60,7 @@ class App extends Component {
 				
 				<main>
 
-					{ < FeatureOptionsList selectedFeatures = { this.state.selected } updateFeature = { this.updateFeature } /> }
+					{ < FeatureOptionsList features = { FEATURES } selectedFeatures = { this.state.selected } updateFeature = { this.updateFeature } /> }
 
 					{ < Summary selectedFeatures = { this.state.selected } /> }
 				

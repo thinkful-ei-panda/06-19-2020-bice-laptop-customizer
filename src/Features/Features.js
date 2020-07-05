@@ -1,16 +1,14 @@
 import React from 'react';
 
-import FEATURES from '../Features';
-
 import FeatureOption from '../FeatureOption/FeatureOption';
 
 export default class Features extends React.Component {
     
-    tmpState = { ...this.props.selectedFeatures };
+    //tmpState = { ...this.props.selectedFeatures };
     
     render () {
         
-        const features = Object.keys ( FEATURES ).map ( ( feature, idx ) => {
+        const features = Object.keys ( this.props.features ).map ( ( feature, idx ) => {
             
             const featureHash = feature + '-' + idx;
 
@@ -24,7 +22,7 @@ export default class Features extends React.Component {
                 
                     </legend>
                 
-                    <FeatureOption key = 'featureOptions' tmpState = { this.tmpState } featureList = { FEATURES } feature = { feature } updateFeature = { this.props.updateFeature } />
+                    <FeatureOption key = 'featureOptions' selectedFeatures = { this.props.selectedFeatures } featureList = { this.props.features } feature = { feature } updateFeature = { this.props.updateFeature } />
                 
                 </fieldset>
 

@@ -20,7 +20,7 @@ export default class FeatureOptionsList extends React.Component {
                     
                     </legend>
 
-                    <Features selectedFeatures = { this.props.selectedFeatures } updateFeature = { this.props.updateFeature } />
+                    <Features features = { this.props.features } selectedFeatures = { this.props.selectedFeatures } updateFeature = { this.props.updateFeature } />
 
                 </form>
 

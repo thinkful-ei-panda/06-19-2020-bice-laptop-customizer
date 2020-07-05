@@ -1,14 +1,12 @@
 import React from 'react';
 
-//import FEATURES from './Features';
-
 import USCurrencyFormat from '../USCurrencyFormat/USCurrencyFormat';
 
 export default class SummaryOptions extends React.Component {
     
     render (){
         
-        let summaryOptions = Object.keys ( this.props.selectedFeatures ).map ( ( feature, idx ) => {
+        return Object.keys ( this.props.selectedFeatures ).map ( ( feature, idx ) => {
                 
             const featureHash = feature + '-' + idx;
 
@@ -34,10 +32,6 @@ export default class SummaryOptions extends React.Component {
 
         })
 
-        return (
-
-            <> { summaryOptions } </>
-
-        );
     }
+    
 }

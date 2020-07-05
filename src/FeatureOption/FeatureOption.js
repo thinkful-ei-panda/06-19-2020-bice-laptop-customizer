@@ -8,9 +8,8 @@ export default class FeatureOptionsList extends React.Component {
 
     render () {
         
-        //console.log (this.props.featureList[ this.props.feature ] );
         const options = this.props.featureList[ this.props.feature ].map ( ( option, i ) => {
-                       
+            
             const optionHash = slugify ( JSON.stringify ( option ) );
                  
                 return ( 
@@ -22,7 +21,7 @@ export default class FeatureOptionsList extends React.Component {
                             id = { optionHash }
                             className = 'feature__option'
                             name = { slugify ( this.props.feature ) }
-                            checked = { option.name === this.props.tmpState[ this.props.feature ].name }
+                            checked = { option.name === this.props.selectedFeatures[ this.props.feature ].name }
                             onChange = { e => this.props.updateFeature ( this.props.feature, option ) }
                         />
 

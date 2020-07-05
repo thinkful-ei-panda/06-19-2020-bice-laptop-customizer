@@ -2,7 +2,7 @@ import React from 'react';
 
 import SummaryTotal from '../SummaryTotal/SummaryTotal';
 
-import SummaryOptions from '../SummaryOptions/SummaryOptions';
+import SummaryOptionsList from '../SummaryOptions/SummaryOptions';
 
 export default class Summary extends React.Component {
 
@@ -14,7 +14,7 @@ export default class Summary extends React.Component {
 
 				<h2>Your cart</h2>
 
-				< SummaryOptions selectedFeatures = { this.props.selectedFeatures } />
+				< SummaryOptionsList selectedFeatures = { this.props.selectedFeatures } />
 				
 				< SummaryTotal selectedFeatures = { this.props.selectedFeatures } />
 
